@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;600;800;900&display=swap");
+@import "./../abstracts/variables";
+
+*,
+*::before,
+*::after {
+	margin: 0px;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+	font-size: 62.5%;
+	line-height: 1.6rem;
+	font-family: "Nunito", sans-serif;
+}
+
+// body {
+//   font-family: "Roboto", sans-serif;
+//   line-height: 1.4;
+// }
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: $text-color;
+}
+
+img {
+	width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
+
+input,
+textarea {
+	border: none;
+	outline: none;
+}
+
+button {
+	outline: none;
+	border: none;
+}

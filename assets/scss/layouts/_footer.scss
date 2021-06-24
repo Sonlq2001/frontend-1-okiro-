@@ -1,0 +1,104 @@
+@import "./../abstracts/variables";
+@import "./../abstracts/mixins";
+
+.footer {
+	border-top: 1px solid $ddd-color;
+
+	.box-footer {
+		text-align: center;
+		margin-top: 2.5rem;
+		@include pc {
+			text-align: left;
+		}
+
+		@include pc-larger {
+			text-align: left;
+		}
+
+		.box-footer__logo {
+			width: 9rem;
+		}
+
+		.box-footer__txt {
+			font-size: 1.5rem;
+			margin-top: 2rem;
+			padding: 0 2rem;
+			line-height: 2.2rem;
+			color: $text-color;
+			@include tablet {
+				padding: 0 10rem;
+			}
+
+			@include pc {
+				padding: 0;
+				max-width: 55%;
+			}
+
+			@include pc-larger {
+				padding: 0;
+				max-width: 55%;
+			}
+		}
+
+		.list-social {
+			display: flex;
+			justify-content: center;
+			margin: 3rem 0 4rem 0;
+
+			@include pc {
+				justify-content: flex-start;
+				margin-left: -1rem;
+			}
+
+			@include pc-larger {
+				justify-content: flex-start;
+				margin-left: -1rem;
+			}
+
+			.item-social {
+				margin: 0 1rem;
+
+				.link-social {
+					font-size: 2.3rem;
+					&:hover {
+						color: $blue-deep-color;
+					}
+				}
+			}
+		}
+
+		.box-footer__title {
+			font: {
+				size: 1.1rem;
+				weight: 600;
+			}
+			letter-spacing: 3px;
+			text-transform: uppercase;
+		}
+
+		.box-footer__list {
+			margin-top: 1.5rem;
+			.box-footer__item {
+				margin: 1rem 0;
+
+				a {
+					font: {
+						size: 1.4rem;
+						weight: 800;
+					}
+
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+
+	.box-policy {
+		text-align: center;
+		font-size: 1.2rem;
+		color: $text-color;
+		margin: 4rem 0 2rem 0;
+	}
+}

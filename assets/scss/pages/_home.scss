@@ -1,0 +1,384 @@
+@import "./../abstracts/variables";
+@import "./../abstracts/mixins";
+
+.main {
+	// row demo
+	.row-deco {
+		text-align: center;
+		margin: 0 0 1rem 0;
+		text-transform: uppercase;
+		@include deco-line-wave;
+	}
+
+	.deco-range {
+		margin-top: 4rem;
+	}
+
+	// row box
+	.row-box {
+		@include pc {
+			margin-top: 4.5rem;
+			.row {
+				margin-left: -20px;
+				margin-right: -20px;
+			}
+			.wide .col {
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+		}
+
+		@include pc-larger {
+			margin-top: 4.5rem;
+			.row {
+				margin-left: -25px;
+				margin-right: -25px;
+			}
+			.wide .col {
+				padding-left: 25px;
+				padding-right: 25px;
+			}
+		}
+		// box card
+		.box-model {
+			display: block;
+			padding: 1.5rem;
+			border-radius: 1.5rem;
+			// min-height: 21.2rem;
+			height: 100%;
+
+			.model-header {
+				position: relative;
+				padding-top: 80%;
+				&__image {
+					top: 0;
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					border-radius: 1rem;
+					object-fit: cover;
+				}
+			}
+
+			.model-content {
+				margin-top: 1rem;
+				font-size: 1.1rem;
+				color: $text-color;
+				line-height: 2rem;
+			}
+		}
+	}
+
+	// row posts
+	.row-post {
+		margin-top: 2.5rem;
+
+		.box-header {
+			position: relative;
+			padding-top: 100%;
+
+			@include tablet {
+				height: 100%;
+			}
+
+			@include pc-larger {
+				padding-top: 85%;
+				margin-right: 2rem;
+			}
+
+			.box-post__img {
+				position: absolute;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				border-radius: 2rem;
+			}
+		}
+
+		.box-content {
+			padding: 2rem 1.5rem;
+			color: $text-color;
+
+			@include pc-larger {
+				max-width: 80%;
+			}
+
+			.box-content__btn {
+				@include btn-box;
+			}
+
+			.img-deco {
+				@include line-wave;
+			}
+
+			.box-content__title {
+				font-size: 3rem;
+				line-height: 4rem;
+				margin: 2rem 0;
+
+				@include pc-larger {
+					font: {
+						size: 4rem;
+					}
+				}
+			}
+
+			.box-content__des {
+				font: {
+					size: 1.7rem;
+					weight: 600;
+				}
+				line-height: 2.8rem;
+				margin-top: 1rem;
+
+				@include tablet {
+					display: none;
+				}
+
+				@include pc {
+					display: none;
+				}
+
+				@include pc-larger {
+					display: none;
+				}
+			}
+
+			.model-author {
+				margin-top: 2rem;
+				position: relative;
+				@include tablet {
+					display: flex;
+				}
+
+				.list-author {
+					display: flex;
+					.list-author-img {
+						width: 3.5rem;
+						height: 3.5rem;
+						border-radius: 100%;
+						z-index: 50;
+						border: 2px solid $white-color;
+					}
+
+					.author-other {
+						position: relative;
+						left: -1rem;
+						z-index: -1;
+					}
+				}
+
+				.time-post {
+					color: $text-color;
+
+					.link-author {
+						margin: 5px 0;
+
+						.address-author {
+							font: {
+								size: 1.3rem;
+								weight: 600;
+							}
+						}
+					}
+				}
+
+				.date-post {
+					font-size: 1.4rem;
+				}
+			}
+		}
+	}
+
+	// row card
+	.row-card {
+		margin-top: 3rem;
+		@include pc-larger {
+			.row {
+				margin-right: -20px;
+				margin-left: -20px;
+				.mt-2 {
+					margin-top: 4rem;
+				}
+			}
+			.wide .col {
+				padding-right: 20px;
+				padding-left: 20px;
+			}
+		}
+
+		.box-card {
+			display: block;
+			border-radius: 2.5rem;
+			overflow: hidden;
+
+			.box-card__header {
+				position: relative;
+				height: 20rem;
+				padding-top: 80%;
+
+				@include pc-larger {
+					padding-top: 60%;
+				}
+
+				.box-card-img {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+
+			.box-card__body {
+				padding: 2rem 2rem 1rem 2rem;
+				@include pc-larger {
+					padding: 3rem;
+				}
+
+				.card-title {
+					font-size: 2.2rem;
+				}
+
+				.box-card__author {
+					margin: 1rem 0;
+					font: {
+						size: 1.4rem;
+						weight: 700;
+					}
+					line-height: 2rem;
+				}
+
+				.cate-post {
+					@include btn-box;
+					font-size: 1rem;
+					background-color: rgba(0, 0, 0, 0.06);
+					&:hover {
+						background-color: rgba(0, 0, 0, 0.09);
+					}
+				}
+			}
+		}
+
+		.view-more {
+			text-align: center;
+			margin: 4rem 0 9rem 0;
+			.btn-view-more {
+				padding: 2.2rem 2.5rem;
+				background-color: $blue-deep-color;
+				color: $white-color;
+				font: {
+					size: 1.5rem;
+					weight: 600;
+				}
+				border-radius: 3rem;
+				transition: linear 0.2s;
+				cursor: pointer;
+
+				@include tablet {
+					padding: 2.6rem 3rem;
+					border-radius: 3.5rem;
+					font-size: 1.7rem;
+				}
+
+				&:hover {
+					background-color: $blue-deep-hover;
+				}
+			}
+		}
+	}
+
+	// row subscribe
+	.row-subscribe {
+		margin: 7.5rem 0 6.5rem 0;
+
+		.subscribe-title {
+			text-align: center;
+			font-size: 1.7rem;
+			font-weight: 800;
+			line-height: 3.5rem;
+			color: $text-color;
+
+			@include tablet {
+				font-size: 2rem;
+			}
+		}
+
+		.subscribe-form {
+			background-color: $bgr-nav-mobile;
+			margin-top: 3rem;
+			padding: 6px;
+			overflow: hidden;
+			border-radius: 3.5rem;
+
+			@include tablet {
+				padding: 1rem;
+				width: 65%;
+				margin: 0 auto;
+				margin-top: 3rem;
+				border-radius: 4.5rem;
+			}
+
+			@include pc {
+				margin: 0;
+			}
+
+			@include pc-larger {
+				margin: 0;
+				width: 70%;
+				margin-left: auto;
+			}
+
+			.subscribe-field {
+				display: flex;
+				.subscribe-field__input {
+					width: 55%;
+					height: calc(6.7rem - 6px);
+					background-color: transparent;
+					padding: 0 1.3rem;
+					margin-right: 2rem;
+					font-size: 1.4rem;
+
+					@include tablet {
+						height: calc(8.1rem - 8px);
+						width: 65%;
+						font-size: 2rem;
+					}
+
+					&::placeholder {
+						font-size: 1.5rem;
+						color: $text-color;
+						font-family: "Nunito", sans-serif;
+						@include tablet {
+							font-size: 1.9rem;
+						}
+					}
+				}
+
+				.subscribe-field__btn {
+					background-color: $blue-deep-color;
+					width: 45%;
+					color: $white-color;
+					font-family: "Nunito", sans-serif;
+					font: {
+						size: 1.6rem;
+						weight: 700;
+					}
+					border-radius: 3.5rem;
+					transition: linear 0.2s;
+					cursor: pointer;
+
+					@include tablet {
+						font-size: 2rem;
+					}
+
+					&:hover {
+						background-color: $blue-deep-hover;
+					}
+				}
+			}
+		}
+	}
+}

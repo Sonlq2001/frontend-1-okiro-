@@ -1,0 +1,17 @@
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+@import "./base/reset";
+
+.app {
+	padding: 0 2rem;
+	@include pc {
+		padding: 0;
+	}
+
+	@import "./layouts/header";
+
+	@import "./pages/home";
+	@import "./pages/membership";
+
+	@import "./layouts/footer";
+}

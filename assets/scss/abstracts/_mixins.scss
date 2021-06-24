@@ -1,0 +1,84 @@
+@mixin positionAlign($position) {
+	@if ($position == "center") {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	} @else if ($position == "vertical") {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	} @else if ($position == "horizontal") {
+		position: absolute;
+		let: 50%;
+		transform: translateX(-50%);
+	} @else if ($position == "near-top") {
+		position: absolute;
+		top: 30%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+@mixin btn-box {
+	outline: none;
+	border: none;
+	display: inline-block;
+	padding: 8px 1.2rem;
+	background-color: $btn-color;
+	border-radius: 1.5rem;
+	font-size: 1rem;
+	text-transform: uppercase;
+	color: $text-color;
+	font-weight: 600;
+	letter-spacing: 2px;
+	transition: linear 0.2s;
+	&:hover {
+		background-color: rgb(230, 230, 230);
+	}
+}
+
+@mixin deco-line-wave {
+	.title-deco {
+		font: {
+			weight: 600;
+			size: 1.2rem;
+		}
+		margin-bottom: 0.8rem;
+	}
+
+	.img-deco {
+		width: 9rem;
+		opacity: 0.1;
+	}
+}
+
+@mixin line-wave {
+	width: 9rem;
+	opacity: 0.1;
+}
+
+// responsive
+@mixin mobile {
+	@media (max-width: 739.98px) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (min-width: 740px) and (max-width: 1023.98px) {
+		@content;
+	}
+}
+
+@mixin pc {
+	@media (min-width: 1024px) and (max-width: 1239.98px) {
+		@content;
+	}
+}
+
+@mixin pc-larger {
+	@media (min-width: 1240px) {
+		@content;
+	}
+}

@@ -1,0 +1,241 @@
+@import "./../abstracts/variables";
+@import "./../abstracts/mixins";
+
+.box-member {
+	position: relative;
+	overflow: hidden;
+	border-radius: 2rem;
+	padding: 2.7rem;
+	height: 338px;
+
+	@include tablet {
+		height: auto;
+		padding: 3.5rem;
+		border-radius: 3rem;
+		margin-top: 2rem;
+		height: 290px;
+	}
+
+	@include pc {
+		border-radius: 5rem;
+		height: 328px;
+		padding: 5rem;
+		margin-top: 5rem;
+	}
+
+	@include pc-larger {
+		border-radius: 5rem;
+		height: 328px;
+		padding: 5rem;
+		margin-top: 5rem;
+	}
+
+	&__img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		.member-img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	.member-content {
+		position: relative;
+		height: 100%;
+		background-color: $white-color;
+		border-radius: 2rem;
+		padding: 2.5rem 2rem;
+		color: $text-color;
+
+		@include tablet {
+			width: 75%;
+		}
+
+		@include pc {
+			width: 50%;
+		}
+
+		@include pc-larger {
+			width: 40%;
+		}
+
+		&__title {
+			font: {
+				size: 3.3rem;
+				weight: 800;
+			}
+			word-break: break-all;
+			line-height: 3rem;
+		}
+
+		.img-line-run {
+			@include line-wave();
+			display: block;
+			margin: 1.7rem 0;
+		}
+
+		&__text {
+			font: {
+				size: 1.5rem;
+				weight: 700;
+			}
+			line-height: 2.5rem;
+		}
+	}
+}
+
+.row-plan {
+	// margin: 2rem 0;
+
+	@include tablet {
+		.fix-margin {
+			margin: 0;
+		}
+	}
+
+	@include pc {
+		.fix-margin {
+			margin: 0;
+		}
+
+		.col {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+
+		.row {
+			margin-left: -20px;
+			margin-right: -20px;
+		}
+	}
+
+	@include pc-larger {
+		.fix-margin {
+			margin: 0;
+		}
+
+		.col {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+
+		.row {
+			margin-left: -20px;
+			margin-right: -20px;
+		}
+	}
+
+	&__title {
+		text-align: center;
+		font: {
+			size: 1.7rem;
+			weight: 800;
+		}
+		color: $text-color;
+		margin: 2.5rem 0;
+	}
+
+	.box-plan {
+		overflow: hidden;
+		border-radius: 2.5rem;
+
+		&__header {
+			background-color: $blue-deep-color;
+			text-align: center;
+			text-transform: uppercase;
+			color: $white-color;
+			letter-spacing: 2px;
+			font: {
+				size: 1.1rem;
+				weight: 800;
+			}
+			padding: 1rem 0;
+		}
+
+		&-body {
+			background-color: $card-plan-color;
+			text-align: center;
+			padding: 2rem;
+
+			&__price {
+				color: $text-color;
+				margin-top: 2rem;
+				font: {
+					size: 6rem;
+					weight: 800;
+				}
+
+				@include pc {
+					font-size: 9rem;
+					top: 0;
+				}
+
+				@include pc-larger {
+					font-size: 9rem;
+					top: 0;
+				}
+
+				.sup-price {
+					font-size: 3rem;
+					@include pc {
+						font-size: 4.5rem;
+					}
+
+					@include pc-larger {
+						font-size: 4.5rem;
+					}
+				}
+
+				.plan-number {
+					position: relative;
+					left: -1.3rem;
+					top: 3px;
+				}
+			}
+
+			.box-plan-list {
+				margin: 4.5rem 0;
+				font-size: 1.4rem;
+				line-height: 2.8rem;
+				color: $text-color;
+
+				@include pc-larger {
+					font-size: 1.6rem;
+				}
+			}
+
+			.btn-sub-plan {
+				display: inline-block;
+				background-color: $blue-deep-color;
+				color: $white-color;
+				font: {
+					size: 1.6rem;
+					weight: 800;
+				}
+				padding: 20px;
+				border-radius: 3rem;
+				margin-bottom: 1rem;
+
+				@include pc {
+					.btn-sub-plan {
+						padding: 30px;
+					}
+				}
+			}
+		}
+	}
+
+	.box-question {
+		margin: 2rem 0 8rem 0;
+		text-align: center;
+		font-size: 1.1rem;
+		.box-question__link {
+			font-weight: 700;
+		}
+	}
+}

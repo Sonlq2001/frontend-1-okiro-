@@ -1,0 +1,48 @@
+$pink-box: #fce6f0;
+$blue-box: #d7f8ff;
+$yellow-box: #ffeab9;
+$green-box: #d2f8f0;
+$text-color: #2b394e;
+$red-box: #fddfd8;
+$blue-deep-color: #646eff;
+$blue-deep-hover: #535fff;
+$bgr-nav-mobile: #ededf1;
+$white-color: #fff;
+$eee-color: #eee;
+$ddd-color: #ddd;
+$btn-color: #f0f0f0;
+$cream-color: #fdeacc;
+$card-plan-color: #f4f4f7;
+//
+.mt-1 {
+	margin-top: 1rem;
+}
+
+.mt-1_5 {
+	margin-top: 1.5rem;
+}
+
+.mt-2 {
+	margin-top: 2rem;
+}
+
+// color box
+.card-blue {
+	background-color: $blue-box;
+}
+
+.card-pink {
+	background-color: $pink-box;
+}
+
+.card-yellow {
+	background-color: $yellow-box;
+}
+
+.card-green {
+	background-color: $green-box;
+}
+
+.card-cream {
+	background-color: $cream-color;
+}
